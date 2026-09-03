@@ -1,0 +1,11 @@
+.env
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.db
+credentials/token.json
+*.wav
+*.mp3
+.DS_Store
+node_modules/

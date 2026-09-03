@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+httpx
+aiohttp
+python-dotenv
+sounddevice
+numpy
+scipy
+newsapi-python
+requests
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+pydantic

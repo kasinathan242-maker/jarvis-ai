@@ -1,0 +1,16 @@
+{
+  "name": "jarvis-ai",
+  "version": "1.0.0",
+  "description": "JARVIS AI is an autonomous, voice-driven desktop agent built with Python, AsyncIO, SQLite, Whisper STT, ElevenLabs TTS, and FastAPI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1"
+  }
+}
