@@ -1,4 +1,7 @@
-from .jarvis import Jarvis
-from .intent_router import route, classify_intent
+"""JARVIS Lite — Core Module."""
 
-__all__ = ["Jarvis", "route", "classify_intent"]
+from core.event_bus import bus
+from core.lifecycle import lifecycle
+from core.task_manager import task_manager
+
+__all__ = ["bus", "lifecycle", "task_manager"]

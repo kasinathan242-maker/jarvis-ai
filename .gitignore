@@ -1,5 +1,9 @@
 .env
 venv/
+.venv/
+logs/
+data/
+chroma_db/
 __pycache__/
 *.pyc
 *.pyo
@@ -9,3 +13,13 @@ credentials/token.json
 *.mp3
 .DS_Store
 node_modules/
+.playwright-mcp/
+test-results/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+backups/
+*.pt
+models/lora_adapters/
+JARVIS_AI_Blueprint.docx
+

@@ -1,0 +1,75 @@
+system:
+  name: "JARVIS Lite"
+  version: "1.0.0"
+  env: "development"
+  log_level: "INFO"
+  logs_dir: "logs"
+  data_dir: "data"
+
+server:
+  host: "127.0.0.1"
+  port: 8001
+  api_prefix: "/api/v1"
+  cors_origins:
+    - "http://localhost:8001"
+    - "http://127.0.0.1:8001"
+    - "http://localhost:1420"
+    - "tauri://localhost"
+
+models:
+  custom:
+    enabled: true
+    models_dir: "models"
+    intent_model_path: "models/intent_classifier/model.onnx"
+    embeddings_model_path: "models/embeddings/model.onnx"
+    lora_adapter_path: "models/lora_adapters/jarvis_toolcall"
+  ollama:
+    base_url: "http://127.0.0.1:11434"
+    connect_timeout: 5.0
+    read_timeout: 120.0
+    max_retries: 3
+    circuit_breaker_failure_threshold: 3
+    circuit_breaker_recovery_time: 30.0
+  lmstudio:
+    base_url: "http://127.0.0.1:1234/v1"
+    connect_timeout: 5.0
+    read_timeout: 120.0
+    max_retries: 3
+    circuit_breaker_failure_threshold: 3
+    circuit_breaker_recovery_time: 30.0
+  routing:
+    chat: "qwen2.5:1.5b"
+    route: "qwen2.5:1.5b"
+    plan: "qwen2.5:1.5b"
+    code: "qwen2.5:1.5b"
+    summarize: "qwen2.5:1.5b"
+    embed: "nomic-embed-text"
+
+voice:
+  stt:
+    model: "base.en"
+    device: "cpu"
+    compute_type: "int8"
+  tts:
+    engine: "edge-tts"
+    voice: "en-US-ChristopherNeural"
+    rate: "+0%"
+    pitch: "+0Hz"
+
+database:
+  sqlite_url: "sqlite:///data/jarvis.db"
+  chroma_persist_dir: "data/chroma"
+
+security:
+  emergency_hotkey: "Ctrl+Alt+Shift+X"
+  emergency_phrase: "jarvis stop everything"
+  allow_shell_commands:
+    - "git"
+    - "python"
+    - "pip"
+    - "npm"
+    - "node"
+    - "pytest"
+    - "dir"
+    - "where"
+    - "code"

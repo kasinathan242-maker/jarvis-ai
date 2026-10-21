@@ -1,0 +1,37 @@
+{
+  "classes": [
+    "browse_web",
+    "clipboard_action",
+    "delete_file",
+    "document_qa",
+    "email_calendar",
+    "emergency_stop",
+    "general_chat",
+    "open_application",
+    "run_shell",
+    "screen_analysis",
+    "search_files",
+    "system_stats",
+    "window_action"
+  ],
+  "class_to_idx": {
+    "browse_web": 0,
+    "clipboard_action": 1,
+    "delete_file": 2,
+    "document_qa": 3,
+    "email_calendar": 4,
+    "emergency_stop": 5,
+    "general_chat": 6,
+    "open_application": 7,
+    "run_shell": 8,
+    "screen_analysis": 9,
+    "search_files": 10,
+    "system_stats": 11,
+    "window_action": 12
+  },
+  "vocab_size": 324,
+  "embed_dim": 64,
+  "hidden_dim": 128,
+  "num_classes": 13,
+  "best_val_acc": 1.0
+}

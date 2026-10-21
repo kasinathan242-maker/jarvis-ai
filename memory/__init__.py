@@ -1,12 +1,15 @@
-from .db import init_db, get_connection
-from .store import save_conversation, save_memory
-from .recall import get_recent_conversations, search_memory
+"""JARVIS Lite — Memory Module."""
+
+from memory.conversation_store import get_recent_history, save_message
+from memory.long_term_memory import delete_memory, list_all_memories, save_long_term_memory, search_memories
+from memory.retrieval import build_augmented_context
 
 __all__ = [
-    "init_db",
-    "get_connection",
-    "save_conversation",
-    "save_memory",
-    "get_recent_conversations",
-    "search_memory"
+    "save_message",
+    "get_recent_history",
+    "save_long_term_memory",
+    "search_memories",
+    "list_all_memories",
+    "delete_memory",
+    "build_augmented_context",
 ]

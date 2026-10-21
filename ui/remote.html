@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>JARVIS Lite — Remote Companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-base: #06080d;
+      --bg-surface: rgba(14, 20, 32, 0.75);
+      --bg-surface-elevated: rgba(22, 32, 50, 0.85);
+      --border-subtle: rgba(0, 240, 255, 0.15);
+      --border-focus: #00f0ff;
+      --text-main: #f0f4f8;
+      --text-muted: #8292a6;
+      --accent-cyan: #00f0ff;
+      --accent-cyan-glow: rgba(0, 240, 255, 0.35);
+      --accent-amber: #ffb800;
+      --accent-red: #ff3366;
+      --accent-green: #00ff88;
+      --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(255, 51, 102, 0.05) 0%, transparent 50%);
+      color: var(--text-main);
+      font-family: var(--font-ui);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      padding: 16px;
+      padding-bottom: 90px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(16px);
+      margin-bottom: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-pip {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      box-shadow: 0 0 10px var(--accent-green);
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.9); }
+    }
+
+    .brand-title {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-cyan);
+      font-family: var(--font-mono);
+    }
+
+    .token-badge {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      background: rgba(0, 240, 255, 0.1);
+      border: 1px solid var(--border-subtle);
+      color: var(--accent-cyan);
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+    }
+
+    /* Auth Banner */
+    #authBanner {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--accent-amber);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 16px;
+      display: none;
+    }
+
+    #authBanner input {
+      width: 100%;
+      padding: 10px 12px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      margin-top: 8px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .btn-primary {
+      background: var(--accent-cyan);
+      color: #000;
+      box-shadow: 0 0 12px var(--accent-cyan-glow);
+    }
+
+    .btn-danger {
+      background: var(--accent-red);
+      color: #fff;
+    }
+
+    /* Telemetry Grid */
+    .telemetry-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .metric-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      backdrop-filter: blur(16px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-cyan), transparent);
+    }
+
+    .metric-label {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .metric-value {
+      font-size: 22px;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      color: var(--text-main);
+    }
+
+    .metric-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Approvals Drawer */
+    .section-title {
+      font-size: 12px;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-amber);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .approval-card {
+      background: rgba(255, 184, 0, 0.08);
+      border: 1px solid var(--accent-amber);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .approval-header {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .approval-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      margin-bottom: 12px;
+    }
+
+    .approval-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .approval-actions button {
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-approve {
+      background: var(--accent-green);
+      color: #000;
+    }
+
+    .btn-deny {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* Command Section */
+    .command-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      backdrop-filter: blur(16px);
+      margin-bottom: 16px;
+    }
+
+    .command-input-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .command-input-row input {
+      flex: 1;
+      padding: 10px 14px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-size: 13px;
+    }
+
+    .command-input-row input:focus {
+      outline: none;
+      border-color: var(--accent-cyan);
+    }
+
+    .chips-row {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    .chip {
+      font-size: 11px;
+      padding: 6px 10px;
+      background: rgba(0, 240, 255, 0.08);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .chip:hover {
+      color: var(--accent-cyan);
+      border-color: var(--accent-cyan);
+    }
+
+    .output-panel {
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-family: var(--font-mono);
+      line-height: 1.5;
+      color: var(--text-main);
+      display: none;
+    }
+
+    /* Floating Emergency Stop Bar */
+    .emergency-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 14px 16px;
+      background: rgba(6, 8, 13, 0.95);
+      border-top: 1px solid rgba(255, 51, 102, 0.3);
+      backdrop-filter: blur(20px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .emergency-btn {
+      width: 100%;
+      background: var(--accent-red);
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 16px rgba(255, 51, 102, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-pip"></div>
+      <div class="brand-title">JARVIS Lite • Remote</div>
+    </div>
+    <div class="token-badge" id="tokenBadge" onclick="showAuthPrompt()">TOKEN AUTH</div>
+  </header>
+
+  <div id="authBanner">
+    <div style="font-size: 13px; font-weight: 600; color: var(--accent-amber);">Bearer Authentication Required</div>
+    <div style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">Enter your Windows Credential Manager token to connect:</div>
+    <input type="password" id="tokenInput" placeholder="Enter API Bearer Token">
+    <button class="btn btn-primary" onclick="saveToken()">Connect Securely</button>
+  </div>
+
+  <div class="telemetry-grid">
+    <div class="metric-card">
+      <div class="metric-label">CPU Load</div>
+      <div class="metric-value" id="valCpu">--%</div>
+      <div class="metric-sub" id="subCpu">Sampling...</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">RAM Usage</div>
+      <div class="metric-value" id="valRam">--%</div>
+      <div class="metric-sub" id="subRam">-- / -- GB</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">GPU VRAM</div>
+      <div class="metric-value" id="valVram">-- MB</div>
+      <div class="metric-sub" id="subVram">RTX 3050 6GB</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Power / Battery</div>
+      <div class="metric-value" id="valBattery">--%</div>
+      <div class="metric-sub" id="subBattery">Checking...</div>
+    </div>
+  </div>
+
+  <!-- Pending Approvals Section -->
+  <div id="approvalsSection" style="display: none;">
+    <div class="section-title">Pending Approvals Required</div>
+    <div id="approvalsList"></div>
+  </div>
+
+  <!-- Command Box -->
+  <div class="command-box">
+    <div class="metric-label">Remote Command Console</div>
+    <div class="command-input-row">
+      <input type="text" id="cmdInput" placeholder="Send query or command..." onkeydown="if(event.key==='Enter') sendCommand()">
+      <button class="btn btn-primary" onclick="sendCommand()">Run</button>
+    </div>
+    <div class="chips-row">
+      <div class="chip" onclick="quickCommand('What\'s on my screen right now?')">What's on screen?</div>
+      <div class="chip" onclick="quickCommand('Give me my daily briefing')">Daily Briefing</div>
+      <div class="chip" onclick="quickCommand('System stats')">System Stats</div>
+    </div>
+    <div class="output-panel" id="cmdOutput"></div>
+  </div>
+
+  <!-- Maintenance Shortcuts -->
+  <div class="command-box">
+    <div class="metric-label">System Operations</div>
+    <div style="display: flex; gap: 8px; margin-top: 6px;">
+      <button class="btn" style="flex: 1; background: rgba(0, 240, 255, 0.1); color: var(--accent-cyan); border: 1px solid var(--border-subtle);" onclick="triggerBackup()">Disaster Backup</button>
+      <button class="btn" style="flex: 1; background: rgba(255, 255, 255, 0.05); color: var(--text-muted); border: 1px solid var(--border-subtle);" onclick="resetPersonalization()">Reset Learning</button>
+    </div>
+  </div>
+
+  <div class="emergency-bar">
+    <button class="emergency-btn" onclick="triggerEmergencyStop()">EMERGENCY HALT</button>
+  </div>
+
+  <script>
+    let apiToken = localStorage.getItem('jarvis_bearer_token') || '';
+
+    function getHeaders() {
+      return {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiToken}`
+      };
+    }
+
+    function showAuthPrompt() {
+      document.getElementById('authBanner').style.display = 'block';
+      document.getElementById('tokenInput').focus();
+    }
+
+    function saveToken() {
+      const val = document.getElementById('tokenInput').value.trim();
+      if (!val) return;
+      apiToken = val;
+      localStorage.setItem('jarvis_bearer_token', val);
+      document.getElementById('authBanner').style.display = 'none';
+      fetchStatus();
+    }
+
+    async function fetchStatus() {
+      if (!apiToken) {
+        showAuthPrompt();
+        return;
+      }
+      try {
+        const res = await fetch('/api/remote/status', { headers: getHeaders() });
+        if (res.status === 401) {
+          showAuthPrompt();
+          return;
+        }
+        const data = await res.json();
+        document.getElementById('valCpu').innerText = `${data.cpu_percent.toFixed(1)}%`;
+        document.getElementById('valRam').innerText = `${data.ram_percent.toFixed(1)}%`;
+        document.getElementById('subRam').innerText = `${(data.ram_used_mb / 1024).toFixed(1)} / ${(data.ram_total_mb / 1024).toFixed(1)} GB`;
+
+        if (data.gpu) {
+          document.getElementById('valVram').innerText = `${data.gpu.used_vram_mb.toFixed(0)} MB`;
+          document.getElementById('subVram').innerText = `${data.gpu.total_vram_mb.toFixed(0)} MB Max (${data.gpu.gpu_utilization_percent.toFixed(0)}% util)`;
+        } else {
+          document.getElementById('valVram').innerText = 'N/A';
+          document.getElementById('subVram').innerText = 'Integrated GPU';
+        }
+
+        if (data.battery) {
+          document.getElementById('valBattery').innerText = `${data.battery.percent.toFixed(0)}%`;
+          document.getElementById('subBattery').innerText = data.battery.is_plugged ? 'AC Power' : 'On Battery';
+        } else {
+          document.getElementById('valBattery').innerText = 'AC';
+          document.getElementById('subBattery').innerText = 'Desktop AC';
+        }
+
+        fetchApprovals();
+      } catch (e) {
+        console.warn('Telemetry poll error', e);
+      }
+    }
+
+    async function fetchApprovals() {
+      try {
+        const res = await fetch('/api/remote/approvals', { headers: getHeaders() });
+        if (res.status === 200) {
+          const tickets = await res.json();
+          const container = document.getElementById('approvalsList');
+          const section = document.getElementById('approvalsSection');
+          if (tickets.length === 0) {
+            section.style.display = 'none';
+            return;
+          }
+          section.style.display = 'block';
+          container.innerHTML = tickets.map(t => `
+            <div class="approval-card">
+              <div class="approval-header">${t.action_type.toUpperCase()}</div>
+              <div class="approval-meta">Target: ${t.target_resource || 'System'}</div>
+              <div class="approval-actions">
+                <button class="btn-approve" onclick="resolveTicket('${t.ticket_id}', true)">Approve</button>
+                <button class="btn-deny" onclick="resolveTicket('${t.ticket_id}', false)">Deny</button>
+              </div>
+            </div>
+          `).join('');
+        }
+      } catch (e) {
+        console.warn('Approvals error', e);
+      }
+    }
+
+    async function resolveTicket(ticketId, approved) {
+      await fetch(`/api/remote/approvals/${ticketId}/resolve`, {
+        method: 'POST',
+        headers: getHeaders(),
+        body: JSON.stringify({ approved })
+      });
+      fetchApprovals();
+    }
+
+    async function sendCommand() {
+      const input = document.getElementById('cmdInput');
+      const text = input.value.trim();
+      if (!text) return;
+      const out = document.getElementById('cmdOutput');
+      out.style.display = 'block';
+      out.innerText = 'Processing command...';
+
+      try {
+        const res = await fetch('/api/remote/command', {
+          method: 'POST',
+          headers: getHeaders(),
+          body: JSON.stringify({ command: text })
+        });
+        const data = await res.json();
+        out.innerText = data.response || 'No response returned.';
+        input.value = '';
+      } catch (e) {
+        out.innerText = `Error: ${e.message}`;
+      }
+    }
+
+    function quickCommand(text) {
+      document.getElementById('cmdInput').value = text;
+      sendCommand();
+    }
+
+    async function triggerBackup() {
+      if (!confirm('Initiate complete disaster recovery backup now?')) return;
+      const res = await fetch('/api/remote/backup', { method: 'POST', headers: getHeaders() });
+      const data = await res.json();
+      alert(`Backup created successfully: ${data.archive_name}`);
+    }
+
+    async function resetPersonalization() {
+      if (!confirm('Wipe all learned personal preferences and restore factory defaults?')) return;
+      const res = await fetch('/api/remote/personalization/reset', { method: 'POST', headers: getHeaders() });
+      const data = await res.json();
+      alert(`Personalization reset complete. Cleared ${data.cleared_count} preference items.`);
+    }
+
+    async function triggerEmergencyStop() {
+      await fetch('/api/remote/emergency-stop', { method: 'POST', headers: getHeaders() });
+      alert('EMERGENCY HALT TRIGGERED: All background tasks and approvals cancelled immediately.');
+      fetchStatus();
+    }
+
+    // Auto-poll telemetry every 3 seconds
+    setInterval(fetchStatus, 3000);
+    fetchStatus();
+  </script>
+</body>
+</html>

@@ -1,7 +1,8 @@
-from datetime import datetime
 import re
+from datetime import datetime
 
-def format_timestamp(dt: datetime = None) -> str:
+
+def format_timestamp(dt: datetime | None = None) -> str:
     if dt is None:
         dt = datetime.now()
     return dt.strftime("%Y-%m-%d %H:%M:%S")

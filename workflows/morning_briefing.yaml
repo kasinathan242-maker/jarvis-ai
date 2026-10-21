@@ -1,0 +1,16 @@
+name: Morning Briefing
+description: Generates executive daily briefing and checks hardware status
+enabled: true
+triggers:
+  - type: voice
+    pattern: "give me the morning briefing"
+  - type: hotkey
+    pattern: "ctrl+shift+b"
+  - type: schedule
+    pattern: "0 8 * * *"
+steps:
+  - name: Generate Executive Briefing
+    action: daily_briefing
+    parameters: {}
+    retries: 1
+    loop_count: 1

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JARVIS Lite — Personal AI Operating System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body class="hud-body">
+  <!-- Scanline & Ambient Grid Layer -->
+  <div class="hud-scanlines"></div>
+  <div class="hud-ambient-glow"></div>
+
+  <!-- Header Navigation -->
+  <header class="hud-header">
+    <div class="brand-cluster">
+      <div class="reactor-core">
+        <div class="core-ring outer"></div>
+        <div class="core-ring inner"></div>
+        <div class="core-dot"></div>
+      </div>
+      <div>
+        <h1 class="brand-title">JARVIS <span class="highlight">LITE</span></h1>
+        <div class="brand-subtitle">LOCAL AI OPERATING SYSTEM &bull; WIN11 RTX 3050</div>
+      </div>
+    </div>
+
+    <div class="header-status-group">
+      <div class="status-badge online" id="connection-status">
+        <span class="status-indicator"></span>
+        <span class="status-text">SYSTEM ONLINE</span>
+      </div>
+
+      <div class="model-badge">
+        <span class="model-label">ROUTER:</span>
+        <span class="model-value" id="active-model">Qwen 2.5 (1.5B)</span>
+      </div>
+
+      <!-- Emergency Halt Button -->
+      <button id="btn-emergency-halt" class="btn-emergency" title="Cancel all running tasks and pending approvals (Ctrl+Alt+Shift+X)">
+        <span class="halt-icon">&#x26A0;</span>
+        <span class="halt-text">EMERGENCY HALT</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Grid Dashboard -->
+  <main class="hud-grid">
+    <!-- Left Column: Telemetry & System Vitals -->
+    <aside class="hud-sidebar">
+      <!-- Vitals Card -->
+      <section class="hud-card vitals-panel">
+        <div class="card-header">
+          <span class="card-title">HARDWARE TELEMETRY</span>
+          <span class="refresh-indicator live">LIVE</span>
+        </div>
+
+        <div class="gauges-grid">
+          <!-- CPU Gauge -->
+          <div class="gauge-box" id="gauge-cpu">
+            <div class="gauge-ring-wrap">
+              <svg viewBox="0 0 100 100" class="gauge-svg">
+                <circle class="gauge-bg" cx="50" cy="50" r="42" />
+                <circle class="gauge-bar cpu-bar" cx="50" cy="50" r="42" style="stroke-dashoffset: 264;" />
+              </svg>
+              <div class="gauge-value" id="val-cpu">0%</div>
+            </div>
+            <div class="gauge-meta">
+              <span class="gauge-name">CPU</span>
+              <span class="gauge-sub" id="sub-cpu">-- cores</span>
+            </div>
+          </div>
+
+          <!-- RAM Gauge -->
+          <div class="gauge-box" id="gauge-ram">
+            <div class="gauge-ring-wrap">
+              <svg viewBox="0 0 100 100" class="gauge-svg">
+                <circle class="gauge-bg" cx="50" cy="50" r="42" />
+                <circle class="gauge-bar ram-bar" cx="50" cy="50" r="42" style="stroke-dashoffset: 264;" />
+              </svg>
+              <div class="gauge-value" id="val-ram">0%</div>
+            </div>
+            <div class="gauge-meta">
+              <span class="gauge-name">RAM</span>
+              <span class="gauge-sub" id="sub-ram">-- / -- GB</span>
+            </div>
+          </div>
+
+          <!-- GPU VRAM Gauge (6 GB RTX 3050) -->
+          <div class="gauge-box" id="gauge-vram">
+            <div class="gauge-ring-wrap">
+              <svg viewBox="0 0 100 100" class="gauge-svg">
+                <circle class="gauge-bg" cx="50" cy="50" r="42" />
+                <circle class="gauge-bar vram-bar" cx="50" cy="50" r="42" style="stroke-dashoffset: 264;" />
+              </svg>
+              <div class="gauge-value" id="val-vram">0%</div>
+            </div>
+            <div class="gauge-meta">
+              <span class="gauge-name">GPU VRAM</span>
+              <span class="gauge-sub" id="sub-vram">-- / 6.00 GB</span>
+            </div>
+          </div>
+
+          <!-- Disk Gauge -->
+          <div class="gauge-box" id="gauge-disk">
+            <div class="gauge-ring-wrap">
+              <svg viewBox="0 0 100 100" class="gauge-svg">
+                <circle class="gauge-bg" cx="50" cy="50" r="42" />
+                <circle class="gauge-bar disk-bar" cx="50" cy="50" r="42" style="stroke-dashoffset: 264;" />
+              </svg>
+              <div class="gauge-value" id="val-disk">0%</div>
+            </div>
+            <div class="gauge-meta">
+              <span class="gauge-name">DISK C:</span>
+              <span class="gauge-sub" id="sub-disk">-- GB Free</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telemetry Stats Rows -->
+        <div class="vitals-stats-list">
+          <div class="vital-row">
+            <span class="v-label">NETWORK LATENCY</span>
+            <span class="v-val" id="val-latency">-- ms</span>
+          </div>
+          <div class="vital-row">
+            <span class="v-label">THROUGHPUT</span>
+            <span class="v-val" id="val-network-io">&uarr; 0 KB/s &bull; &darr; 0 KB/s</span>
+          </div>
+          <div class="vital-row">
+            <span class="v-label">BATTERY</span>
+            <span class="v-val" id="val-battery">--% (Plugged)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Voice & Audio Control Card -->
+      <section class="hud-card voice-panel">
+        <div class="card-header">
+          <span class="card-title">VOICE ENGINE</span>
+          <span class="status-pill" id="wake-status-pill">STANDBY</span>
+        </div>
+
+        <div class="voice-hud-wrap">
+          <div class="mic-visualizer" id="mic-visualizer">
+            <div class="wave-circle ring1"></div>
+            <div class="wave-circle ring2"></div>
+            <button id="btn-mic-toggle" class="btn-mic-core" title="Push To Talk / Wake Word">
+              <svg viewBox="0 0 24 24" class="mic-svg-icon" fill="currentColor">
+                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="voice-meta">
+            <div class="voice-instruction">WAKE PHRASE: <span class="wake-word">"JARVIS"</span></div>
+            <div class="voice-subtext" id="voice-state-desc">Listening on background stream (< 5% CPU)</div>
+          </div>
+        </div>
+
+        <div class="voice-controls">
+          <button id="btn-tts-stop" class="btn-voice-action stop-action" title="Halt current speech playback">
+            &#x25A0; STOP SPEAKING
+          </button>
+          <button id="btn-wakeword-toggle" class="btn-voice-action">
+            TOGGLE WAKE WORD
+          </button>
+        </div>
+      </section>
+    </aside>
+
+    <!-- Center Column: Primary Command & Streaming Chat Console -->
+    <section class="hud-card console-panel">
+      <div class="card-header console-header">
+        <div class="console-title-group">
+          <span class="card-title">INTELLIGENCE CONSOLE</span>
+          <span class="console-breadcrumb">DESKTOP AUTOMATION &bull; REAL-TIME REASONING</span>
+        </div>
+        <div class="console-actions">
+          <button id="btn-clear-chat" class="btn-icon" title="Clear console">&#x21BA;</button>
+        </div>
+      </div>
+
+      <!-- Streaming Chat Messages Container -->
+      <div class="chat-feed" id="chat-feed">
+        <div class="message system-msg">
+          <div class="msg-avatar">AI</div>
+          <div class="msg-content">
+            <div class="msg-header">JARVIS OPERATING SYSTEM <span class="msg-time">BOOT</span></div>
+            <div class="msg-body">
+              Phase 2 Desktop Intelligence initialized. System monitors active. Shell sandbox and permissions armed. Ready for commands.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Command Bar -->
+      <div class="quick-prompts">
+        <button class="chip-prompt" data-prompt="What time is it?">Time</button>
+        <button class="chip-prompt" data-prompt="Open VS Code and my jarvis project">Open Code & Folder</button>
+        <button class="chip-prompt" data-prompt="Take a screenshot">Screenshot</button>
+        <button class="chip-prompt" data-prompt="Read my clipboard">Read Clipboard</button>
+        <button class="chip-prompt" data-prompt="Show system stats">System Stats</button>
+      </div>
+
+      <!-- Command Input -->
+      <form id="chat-form" class="chat-input-bar">
+        <input 
+          type="text" 
+          id="chat-input" 
+          placeholder="Type command or say 'Jarvis, open VS Code and my project'..." 
+          autocomplete="off"
+        />
+        <button type="submit" id="btn-send" class="btn-send">
+          <span>EXECUTE</span>
+          <svg viewBox="0 0 20 20" fill="currentColor" class="send-svg"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/></svg>
+        </button>
+      </form>
+    </section>
+
+    <!-- Right Column: Audit Logs & Running Tasks Drawer -->
+    <aside class="hud-sidebar-right">
+      <section class="hud-card audit-panel">
+        <div class="card-header">
+          <span class="card-title">SECURITY AUDIT FEED</span>
+          <span class="badge-count" id="audit-count">0 CALLS</span>
+        </div>
+        <div class="audit-list" id="audit-list">
+          <!-- Dynamic audit items -->
+        </div>
+      </section>
+
+      <!-- Active Alerts Feed -->
+      <section class="hud-card alerts-panel" id="alerts-card">
+        <div class="card-header">
+          <span class="card-title">TELEMETRY ALERTS</span>
+          <span class="badge-ok" id="alerts-status-badge">NORMAL</span>
+        </div>
+        <div class="alerts-feed" id="alerts-feed">
+          <div class="no-alerts">All safety thresholds normal. VRAM &lt; 5.5 GB.</div>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <!-- Interactive Security Approval Modal -->
+  <div class="modal-backdrop" id="approval-modal">
+    <div class="modal-dialog">
+      <div class="modal-glow"></div>
+      <div class="modal-header">
+        <div class="modal-badge-risk" id="modal-risk-badge">CONFIRM REQUIRED</div>
+        <div class="modal-countdown" id="modal-countdown">30s</div>
+      </div>
+      <h3 class="modal-title" id="modal-tool-name">Action Authorization</h3>
+      <p class="modal-desc" id="modal-description">A sensitive operation requires explicit user authorization before execution.</p>
+
+      <div class="modal-params-wrap">
+        <div class="params-label">EXACT PARAMETERS:</div>
+        <pre class="params-pre" id="modal-params-json">{}</pre>
+      </div>
+
+      <div class="modal-actions">
+        <button id="btn-approve-action" class="btn-modal btn-approve">
+          &#x2714; AUTHORIZE & EXECUTE
+        </button>
+        <button id="btn-reject-action" class="btn-modal btn-reject">
+          &#x2716; REJECT & CANCEL
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
