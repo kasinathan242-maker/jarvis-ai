@@ -1,0 +1,2461 @@
+{
+  "classes": [
+    "browse_web",
+    "clipboard_action",
+    "delete_file",
+    "document_qa",
+    "email_calendar",
+    "emergency_stop",
+    "general_chat",
+    "open_application",
+    "run_shell",
+    "screen_analysis",
+    "search_files",
+    "system_stats",
+    "window_action"
+  ],
+  "num_classes": 13,
+  "total_samples": 610,
+  "samples": [
+    {
+      "text": "open vscode",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis open vscode",
+      "label": "open_application"
+    },
+    {
+      "text": "please open vscode",
+      "label": "open_application"
+    },
+    {
+      "text": "could you open vscode",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you open vscode",
+      "label": "open_application"
+    },
+    {
+      "text": "launch visual studio code",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis launch visual studio code",
+      "label": "open_application"
+    },
+    {
+      "text": "please launch visual studio code",
+      "label": "open_application"
+    },
+    {
+      "text": "could you launch visual studio code",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you launch visual studio code",
+      "label": "open_application"
+    },
+    {
+      "text": "start chrome browser",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis start chrome browser",
+      "label": "open_application"
+    },
+    {
+      "text": "please start chrome browser",
+      "label": "open_application"
+    },
+    {
+      "text": "could you start chrome browser",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you start chrome browser",
+      "label": "open_application"
+    },
+    {
+      "text": "open notepad application",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis open notepad application",
+      "label": "open_application"
+    },
+    {
+      "text": "please open notepad application",
+      "label": "open_application"
+    },
+    {
+      "text": "could you open notepad application",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you open notepad application",
+      "label": "open_application"
+    },
+    {
+      "text": "launch terminal",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis launch terminal",
+      "label": "open_application"
+    },
+    {
+      "text": "please launch terminal",
+      "label": "open_application"
+    },
+    {
+      "text": "could you launch terminal",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you launch terminal",
+      "label": "open_application"
+    },
+    {
+      "text": "open powershell",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis open powershell",
+      "label": "open_application"
+    },
+    {
+      "text": "please open powershell",
+      "label": "open_application"
+    },
+    {
+      "text": "could you open powershell",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you open powershell",
+      "label": "open_application"
+    },
+    {
+      "text": "open my discord",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis open my discord",
+      "label": "open_application"
+    },
+    {
+      "text": "please open my discord",
+      "label": "open_application"
+    },
+    {
+      "text": "could you open my discord",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you open my discord",
+      "label": "open_application"
+    },
+    {
+      "text": "start spotify music player",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis start spotify music player",
+      "label": "open_application"
+    },
+    {
+      "text": "please start spotify music player",
+      "label": "open_application"
+    },
+    {
+      "text": "could you start spotify music player",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you start spotify music player",
+      "label": "open_application"
+    },
+    {
+      "text": "launch calculator",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis launch calculator",
+      "label": "open_application"
+    },
+    {
+      "text": "please launch calculator",
+      "label": "open_application"
+    },
+    {
+      "text": "could you launch calculator",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you launch calculator",
+      "label": "open_application"
+    },
+    {
+      "text": "open file explorer",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis open file explorer",
+      "label": "open_application"
+    },
+    {
+      "text": "please open file explorer",
+      "label": "open_application"
+    },
+    {
+      "text": "could you open file explorer",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you open file explorer",
+      "label": "open_application"
+    },
+    {
+      "text": "start edge browser",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis start edge browser",
+      "label": "open_application"
+    },
+    {
+      "text": "please start edge browser",
+      "label": "open_application"
+    },
+    {
+      "text": "could you start edge browser",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you start edge browser",
+      "label": "open_application"
+    },
+    {
+      "text": "launch code editor",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis launch code editor",
+      "label": "open_application"
+    },
+    {
+      "text": "please launch code editor",
+      "label": "open_application"
+    },
+    {
+      "text": "could you launch code editor",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you launch code editor",
+      "label": "open_application"
+    },
+    {
+      "text": "open slack",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis open slack",
+      "label": "open_application"
+    },
+    {
+      "text": "please open slack",
+      "label": "open_application"
+    },
+    {
+      "text": "could you open slack",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you open slack",
+      "label": "open_application"
+    },
+    {
+      "text": "start task manager",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis start task manager",
+      "label": "open_application"
+    },
+    {
+      "text": "please start task manager",
+      "label": "open_application"
+    },
+    {
+      "text": "could you start task manager",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you start task manager",
+      "label": "open_application"
+    },
+    {
+      "text": "launch command prompt",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis launch command prompt",
+      "label": "open_application"
+    },
+    {
+      "text": "please launch command prompt",
+      "label": "open_application"
+    },
+    {
+      "text": "could you launch command prompt",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you launch command prompt",
+      "label": "open_application"
+    },
+    {
+      "text": "open browser and navigate",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis open browser and navigate",
+      "label": "open_application"
+    },
+    {
+      "text": "please open browser and navigate",
+      "label": "open_application"
+    },
+    {
+      "text": "could you open browser and navigate",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you open browser and navigate",
+      "label": "open_application"
+    },
+    {
+      "text": "start steam client",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis start steam client",
+      "label": "open_application"
+    },
+    {
+      "text": "please start steam client",
+      "label": "open_application"
+    },
+    {
+      "text": "could you start steam client",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you start steam client",
+      "label": "open_application"
+    },
+    {
+      "text": "launch pyvirt",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis launch pyvirt",
+      "label": "open_application"
+    },
+    {
+      "text": "please launch pyvirt",
+      "label": "open_application"
+    },
+    {
+      "text": "could you launch pyvirt",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you launch pyvirt",
+      "label": "open_application"
+    },
+    {
+      "text": "open excel spreadsheet",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis open excel spreadsheet",
+      "label": "open_application"
+    },
+    {
+      "text": "please open excel spreadsheet",
+      "label": "open_application"
+    },
+    {
+      "text": "could you open excel spreadsheet",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you open excel spreadsheet",
+      "label": "open_application"
+    },
+    {
+      "text": "launch word document reader",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis launch word document reader",
+      "label": "open_application"
+    },
+    {
+      "text": "please launch word document reader",
+      "label": "open_application"
+    },
+    {
+      "text": "could you launch word document reader",
+      "label": "open_application"
+    },
+    {
+      "text": "jarvis can you launch word document reader",
+      "label": "open_application"
+    },
+    {
+      "text": "what is my current cpu usage",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis what is my current cpu usage",
+      "label": "system_stats"
+    },
+    {
+      "text": "please what is my current cpu usage",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you what is my current cpu usage",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you what is my current cpu usage",
+      "label": "system_stats"
+    },
+    {
+      "text": "check ram utilization",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis check ram utilization",
+      "label": "system_stats"
+    },
+    {
+      "text": "please check ram utilization",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you check ram utilization",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you check ram utilization",
+      "label": "system_stats"
+    },
+    {
+      "text": "how much vram is free on gpu",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis how much vram is free on gpu",
+      "label": "system_stats"
+    },
+    {
+      "text": "please how much vram is free on gpu",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you how much vram is free on gpu",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you how much vram is free on gpu",
+      "label": "system_stats"
+    },
+    {
+      "text": "show me system telemetry",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis show me system telemetry",
+      "label": "system_stats"
+    },
+    {
+      "text": "please show me system telemetry",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you show me system telemetry",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you show me system telemetry",
+      "label": "system_stats"
+    },
+    {
+      "text": "what is my battery level",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis what is my battery level",
+      "label": "system_stats"
+    },
+    {
+      "text": "please what is my battery level",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you what is my battery level",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you what is my battery level",
+      "label": "system_stats"
+    },
+    {
+      "text": "check gpu temperature",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis check gpu temperature",
+      "label": "system_stats"
+    },
+    {
+      "text": "please check gpu temperature",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you check gpu temperature",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you check gpu temperature",
+      "label": "system_stats"
+    },
+    {
+      "text": "is my laptop plugged in",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis is my laptop plugged in",
+      "label": "system_stats"
+    },
+    {
+      "text": "please is my laptop plugged in",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you is my laptop plugged in",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you is my laptop plugged in",
+      "label": "system_stats"
+    },
+    {
+      "text": "display memory statistics",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis display memory statistics",
+      "label": "system_stats"
+    },
+    {
+      "text": "please display memory statistics",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you display memory statistics",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you display memory statistics",
+      "label": "system_stats"
+    },
+    {
+      "text": "check disk space available",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis check disk space available",
+      "label": "system_stats"
+    },
+    {
+      "text": "please check disk space available",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you check disk space available",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you check disk space available",
+      "label": "system_stats"
+    },
+    {
+      "text": "how hot is my rtx 3050",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis how hot is my rtx 3050",
+      "label": "system_stats"
+    },
+    {
+      "text": "please how hot is my rtx 3050",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you how hot is my rtx 3050",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you how hot is my rtx 3050",
+      "label": "system_stats"
+    },
+    {
+      "text": "monitor hardware load",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis monitor hardware load",
+      "label": "system_stats"
+    },
+    {
+      "text": "please monitor hardware load",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you monitor hardware load",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you monitor hardware load",
+      "label": "system_stats"
+    },
+    {
+      "text": "what is the system health",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis what is the system health",
+      "label": "system_stats"
+    },
+    {
+      "text": "please what is the system health",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you what is the system health",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you what is the system health",
+      "label": "system_stats"
+    },
+    {
+      "text": "check vram and cpu",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis check vram and cpu",
+      "label": "system_stats"
+    },
+    {
+      "text": "please check vram and cpu",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you check vram and cpu",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you check vram and cpu",
+      "label": "system_stats"
+    },
+    {
+      "text": "show system resource consumption",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis show system resource consumption",
+      "label": "system_stats"
+    },
+    {
+      "text": "please show system resource consumption",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you show system resource consumption",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you show system resource consumption",
+      "label": "system_stats"
+    },
+    {
+      "text": "how much storage is left on c drive",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis how much storage is left on c drive",
+      "label": "system_stats"
+    },
+    {
+      "text": "please how much storage is left on c drive",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you how much storage is left on c drive",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you how much storage is left on c drive",
+      "label": "system_stats"
+    },
+    {
+      "text": "are any background tasks overheating the machine",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis are any background tasks overheating the machine",
+      "label": "system_stats"
+    },
+    {
+      "text": "please are any background tasks overheating the machine",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you are any background tasks overheating the machine",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you are any background tasks overheating the machine",
+      "label": "system_stats"
+    },
+    {
+      "text": "check network latency and ping",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis check network latency and ping",
+      "label": "system_stats"
+    },
+    {
+      "text": "please check network latency and ping",
+      "label": "system_stats"
+    },
+    {
+      "text": "could you check network latency and ping",
+      "label": "system_stats"
+    },
+    {
+      "text": "jarvis can you check network latency and ping",
+      "label": "system_stats"
+    },
+    {
+      "text": "find file named report.pdf",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis find file named report.pdf",
+      "label": "search_files"
+    },
+    {
+      "text": "please find file named report.pdf",
+      "label": "search_files"
+    },
+    {
+      "text": "could you find file named report.pdf",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis can you find file named report.pdf",
+      "label": "search_files"
+    },
+    {
+      "text": "search for main.py in downloads",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis search for main.py in downloads",
+      "label": "search_files"
+    },
+    {
+      "text": "please search for main.py in downloads",
+      "label": "search_files"
+    },
+    {
+      "text": "could you search for main.py in downloads",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis can you search for main.py in downloads",
+      "label": "search_files"
+    },
+    {
+      "text": "locate invoice documents",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis locate invoice documents",
+      "label": "search_files"
+    },
+    {
+      "text": "please locate invoice documents",
+      "label": "search_files"
+    },
+    {
+      "text": "could you locate invoice documents",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis can you locate invoice documents",
+      "label": "search_files"
+    },
+    {
+      "text": "find all python files matching test_",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis find all python files matching test_",
+      "label": "search_files"
+    },
+    {
+      "text": "please find all python files matching test_",
+      "label": "search_files"
+    },
+    {
+      "text": "could you find all python files matching test_",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis can you find all python files matching test_",
+      "label": "search_files"
+    },
+    {
+      "text": "where is my configuration file",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis where is my configuration file",
+      "label": "search_files"
+    },
+    {
+      "text": "please where is my configuration file",
+      "label": "search_files"
+    },
+    {
+      "text": "could you where is my configuration file",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis can you where is my configuration file",
+      "label": "search_files"
+    },
+    {
+      "text": "search files with extension docx",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis search files with extension docx",
+      "label": "search_files"
+    },
+    {
+      "text": "please search files with extension docx",
+      "label": "search_files"
+    },
+    {
+      "text": "could you search files with extension docx",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis can you search files with extension docx",
+      "label": "search_files"
+    },
+    {
+      "text": "locate project specification markdown",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis locate project specification markdown",
+      "label": "search_files"
+    },
+    {
+      "text": "please locate project specification markdown",
+      "label": "search_files"
+    },
+    {
+      "text": "could you locate project specification markdown",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis can you locate project specification markdown",
+      "label": "search_files"
+    },
+    {
+      "text": "find files modified today in workspace",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis find files modified today in workspace",
+      "label": "search_files"
+    },
+    {
+      "text": "please find files modified today in workspace",
+      "label": "search_files"
+    },
+    {
+      "text": "could you find files modified today in workspace",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis can you find files modified today in workspace",
+      "label": "search_files"
+    },
+    {
+      "text": "search for requirements.txt",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis search for requirements.txt",
+      "label": "search_files"
+    },
+    {
+      "text": "please search for requirements.txt",
+      "label": "search_files"
+    },
+    {
+      "text": "could you search for requirements.txt",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis can you search for requirements.txt",
+      "label": "search_files"
+    },
+    {
+      "text": "look for budget spreadsheet in downloads",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis look for budget spreadsheet in downloads",
+      "label": "search_files"
+    },
+    {
+      "text": "please look for budget spreadsheet in downloads",
+      "label": "search_files"
+    },
+    {
+      "text": "could you look for budget spreadsheet in downloads",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis can you look for budget spreadsheet in downloads",
+      "label": "search_files"
+    },
+    {
+      "text": "find all log files older than a week",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis find all log files older than a week",
+      "label": "search_files"
+    },
+    {
+      "text": "please find all log files older than a week",
+      "label": "search_files"
+    },
+    {
+      "text": "could you find all log files older than a week",
+      "label": "search_files"
+    },
+    {
+      "text": "jarvis can you find all log files older than a week",
+      "label": "search_files"
+    },
+    {
+      "text": "delete old_log.txt",
+      "label": "delete_file"
+    },
+    {
+      "text": "jarvis delete old_log.txt",
+      "label": "delete_file"
+    },
+    {
+      "text": "please delete old_log.txt",
+      "label": "delete_file"
+    },
+    {
+      "text": "could you delete old_log.txt",
+      "label": "delete_file"
+    },
+    {
+      "text": "jarvis can you delete old_log.txt",
+      "label": "delete_file"
+    },
+    {
+      "text": "remove scratch file in project",
+      "label": "delete_file"
+    },
+    {
+      "text": "jarvis remove scratch file in project",
+      "label": "delete_file"
+    },
+    {
+      "text": "please remove scratch file in project",
+      "label": "delete_file"
+    },
+    {
+      "text": "could you remove scratch file in project",
+      "label": "delete_file"
+    },
+    {
+      "text": "jarvis can you remove scratch file in project",
+      "label": "delete_file"
+    },
+    {
+      "text": "erase temporary test screenshot",
+      "label": "delete_file"
+    },
+    {
+      "text": "jarvis erase temporary test screenshot",
+      "label": "delete_file"
+    },
+    {
+      "text": "please erase temporary test screenshot",
+      "label": "delete_file"
+    },
+    {
+      "text": "could you erase temporary test screenshot",
+      "label": "delete_file"
+    },
+    {
+      "text": "jarvis can you erase temporary test screenshot",
+      "label": "delete_file"
+    },
+    {
+      "text": "delete obsolete backup archive",
+      "label": "delete_file"
+    },
+    {
+      "text": "jarvis delete obsolete backup archive",
+      "label": "delete_file"
+    },
+    {
+      "text": "please delete obsolete backup archive",
+      "label": "delete_file"
+    },
+    {
+      "text": "could you delete obsolete backup archive",
+      "label": "delete_file"
+    },
+    {
+      "text": "jarvis can you delete obsolete backup archive",
+      "label": "delete_file"
+    },
+    {
+      "text": "remove unused cache files in data directory",
+      "label": "delete_file"
+    },
+    {
+      "text": "jarvis remove unused cache files in data directory",
+      "label": "delete_file"
+    },
+    {
+      "text": "please remove unused cache files in data directory",
+      "label": "delete_file"
+    },
+    {
+      "text": "could you remove unused cache files in data directory",
+      "label": "delete_file"
+    },
+    {
+      "text": "jarvis can you remove unused cache files in data directory",
+      "label": "delete_file"
+    },
+    {
+      "text": "delete draft document from disk",
+      "label": "delete_file"
+    },
+    {
+      "text": "jarvis delete draft document from disk",
+      "label": "delete_file"
+    },
+    {
+      "text": "please delete draft document from disk",
+      "label": "delete_file"
+    },
+    {
+      "text": "could you delete draft document from disk",
+      "label": "delete_file"
+    },
+    {
+      "text": "jarvis can you delete draft document from disk",
+      "label": "delete_file"
+    },
+    {
+      "text": "trash temporary debug log",
+      "label": "delete_file"
+    },
+    {
+      "text": "jarvis trash temporary debug log",
+      "label": "delete_file"
+    },
+    {
+      "text": "please trash temporary debug log",
+      "label": "delete_file"
+    },
+    {
+      "text": "could you trash temporary debug log",
+      "label": "delete_file"
+    },
+    {
+      "text": "jarvis can you trash temporary debug log",
+      "label": "delete_file"
+    },
+    {
+      "text": "run git status",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis run git status",
+      "label": "run_shell"
+    },
+    {
+      "text": "please run git status",
+      "label": "run_shell"
+    },
+    {
+      "text": "could you run git status",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis can you run git status",
+      "label": "run_shell"
+    },
+    {
+      "text": "execute pytest -v in terminal",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis execute pytest -v in terminal",
+      "label": "run_shell"
+    },
+    {
+      "text": "please execute pytest -v in terminal",
+      "label": "run_shell"
+    },
+    {
+      "text": "could you execute pytest -v in terminal",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis can you execute pytest -v in terminal",
+      "label": "run_shell"
+    },
+    {
+      "text": "run pip list command",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis run pip list command",
+      "label": "run_shell"
+    },
+    {
+      "text": "please run pip list command",
+      "label": "run_shell"
+    },
+    {
+      "text": "could you run pip list command",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis can you run pip list command",
+      "label": "run_shell"
+    },
+    {
+      "text": "check npm dependencies with npm list",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis check npm dependencies with npm list",
+      "label": "run_shell"
+    },
+    {
+      "text": "please check npm dependencies with npm list",
+      "label": "run_shell"
+    },
+    {
+      "text": "could you check npm dependencies with npm list",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis can you check npm dependencies with npm list",
+      "label": "run_shell"
+    },
+    {
+      "text": "run python bootstrap.py",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis run python bootstrap.py",
+      "label": "run_shell"
+    },
+    {
+      "text": "please run python bootstrap.py",
+      "label": "run_shell"
+    },
+    {
+      "text": "could you run python bootstrap.py",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis can you run python bootstrap.py",
+      "label": "run_shell"
+    },
+    {
+      "text": "execute git diff in workspace",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis execute git diff in workspace",
+      "label": "run_shell"
+    },
+    {
+      "text": "please execute git diff in workspace",
+      "label": "run_shell"
+    },
+    {
+      "text": "could you execute git diff in workspace",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis can you execute git diff in workspace",
+      "label": "run_shell"
+    },
+    {
+      "text": "run dir in current folder",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis run dir in current folder",
+      "label": "run_shell"
+    },
+    {
+      "text": "please run dir in current folder",
+      "label": "run_shell"
+    },
+    {
+      "text": "could you run dir in current folder",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis can you run dir in current folder",
+      "label": "run_shell"
+    },
+    {
+      "text": "run pip check to inspect environment",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis run pip check to inspect environment",
+      "label": "run_shell"
+    },
+    {
+      "text": "please run pip check to inspect environment",
+      "label": "run_shell"
+    },
+    {
+      "text": "could you run pip check to inspect environment",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis can you run pip check to inspect environment",
+      "label": "run_shell"
+    },
+    {
+      "text": "execute pytest tests/test_tools.py",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis execute pytest tests/test_tools.py",
+      "label": "run_shell"
+    },
+    {
+      "text": "please execute pytest tests/test_tools.py",
+      "label": "run_shell"
+    },
+    {
+      "text": "could you execute pytest tests/test_tools.py",
+      "label": "run_shell"
+    },
+    {
+      "text": "jarvis can you execute pytest tests/test_tools.py",
+      "label": "run_shell"
+    },
+    {
+      "text": "what is on my clipboard",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "jarvis what is on my clipboard",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "please what is on my clipboard",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "could you what is on my clipboard",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "jarvis can you what is on my clipboard",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "read clipboard text",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "jarvis read clipboard text",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "please read clipboard text",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "could you read clipboard text",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "jarvis can you read clipboard text",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "copy this summary to my clipboard",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "jarvis copy this summary to my clipboard",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "please copy this summary to my clipboard",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "could you copy this summary to my clipboard",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "jarvis can you copy this summary to my clipboard",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "write the generated code to clipboard",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "jarvis write the generated code to clipboard",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "please write the generated code to clipboard",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "could you write the generated code to clipboard",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "jarvis can you write the generated code to clipboard",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "inspect current clipboard buffer",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "jarvis inspect current clipboard buffer",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "please inspect current clipboard buffer",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "could you inspect current clipboard buffer",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "jarvis can you inspect current clipboard buffer",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "paste clipboard content into message",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "jarvis paste clipboard content into message",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "please paste clipboard content into message",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "could you paste clipboard content into message",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "jarvis can you paste clipboard content into message",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "clear the clipboard buffer",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "jarvis clear the clipboard buffer",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "please clear the clipboard buffer",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "could you clear the clipboard buffer",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "jarvis can you clear the clipboard buffer",
+      "label": "clipboard_action"
+    },
+    {
+      "text": "focus chrome window",
+      "label": "window_action"
+    },
+    {
+      "text": "jarvis focus chrome window",
+      "label": "window_action"
+    },
+    {
+      "text": "please focus chrome window",
+      "label": "window_action"
+    },
+    {
+      "text": "could you focus chrome window",
+      "label": "window_action"
+    },
+    {
+      "text": "jarvis can you focus chrome window",
+      "label": "window_action"
+    },
+    {
+      "text": "minimize vscode editor",
+      "label": "window_action"
+    },
+    {
+      "text": "jarvis minimize vscode editor",
+      "label": "window_action"
+    },
+    {
+      "text": "please minimize vscode editor",
+      "label": "window_action"
+    },
+    {
+      "text": "could you minimize vscode editor",
+      "label": "window_action"
+    },
+    {
+      "text": "jarvis can you minimize vscode editor",
+      "label": "window_action"
+    },
+    {
+      "text": "maximize browser window",
+      "label": "window_action"
+    },
+    {
+      "text": "jarvis maximize browser window",
+      "label": "window_action"
+    },
+    {
+      "text": "please maximize browser window",
+      "label": "window_action"
+    },
+    {
+      "text": "could you maximize browser window",
+      "label": "window_action"
+    },
+    {
+      "text": "jarvis can you maximize browser window",
+      "label": "window_action"
+    },
+    {
+      "text": "bring visual studio code to front",
+      "label": "window_action"
+    },
+    {
+      "text": "jarvis bring visual studio code to front",
+      "label": "window_action"
+    },
+    {
+      "text": "please bring visual studio code to front",
+      "label": "window_action"
+    },
+    {
+      "text": "could you bring visual studio code to front",
+      "label": "window_action"
+    },
+    {
+      "text": "jarvis can you bring visual studio code to front",
+      "label": "window_action"
+    },
+    {
+      "text": "switch to command prompt window",
+      "label": "window_action"
+    },
+    {
+      "text": "jarvis switch to command prompt window",
+      "label": "window_action"
+    },
+    {
+      "text": "please switch to command prompt window",
+      "label": "window_action"
+    },
+    {
+      "text": "could you switch to command prompt window",
+      "label": "window_action"
+    },
+    {
+      "text": "jarvis can you switch to command prompt window",
+      "label": "window_action"
+    },
+    {
+      "text": "list all active windows on my desktop",
+      "label": "window_action"
+    },
+    {
+      "text": "jarvis list all active windows on my desktop",
+      "label": "window_action"
+    },
+    {
+      "text": "please list all active windows on my desktop",
+      "label": "window_action"
+    },
+    {
+      "text": "could you list all active windows on my desktop",
+      "label": "window_action"
+    },
+    {
+      "text": "jarvis can you list all active windows on my desktop",
+      "label": "window_action"
+    },
+    {
+      "text": "hide the terminal window",
+      "label": "window_action"
+    },
+    {
+      "text": "jarvis hide the terminal window",
+      "label": "window_action"
+    },
+    {
+      "text": "please hide the terminal window",
+      "label": "window_action"
+    },
+    {
+      "text": "could you hide the terminal window",
+      "label": "window_action"
+    },
+    {
+      "text": "jarvis can you hide the terminal window",
+      "label": "window_action"
+    },
+    {
+      "text": "search google for python asyncio patterns",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis search google for python asyncio patterns",
+      "label": "browse_web"
+    },
+    {
+      "text": "please search google for python asyncio patterns",
+      "label": "browse_web"
+    },
+    {
+      "text": "could you search google for python asyncio patterns",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis can you search google for python asyncio patterns",
+      "label": "browse_web"
+    },
+    {
+      "text": "browse langchain documentation online",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis browse langchain documentation online",
+      "label": "browse_web"
+    },
+    {
+      "text": "please browse langchain documentation online",
+      "label": "browse_web"
+    },
+    {
+      "text": "could you browse langchain documentation online",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis can you browse langchain documentation online",
+      "label": "browse_web"
+    },
+    {
+      "text": "look up latest pytorch release notes",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis look up latest pytorch release notes",
+      "label": "browse_web"
+    },
+    {
+      "text": "please look up latest pytorch release notes",
+      "label": "browse_web"
+    },
+    {
+      "text": "could you look up latest pytorch release notes",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis can you look up latest pytorch release notes",
+      "label": "browse_web"
+    },
+    {
+      "text": "search duckduckgo for windows api docs",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis search duckduckgo for windows api docs",
+      "label": "browse_web"
+    },
+    {
+      "text": "please search duckduckgo for windows api docs",
+      "label": "browse_web"
+    },
+    {
+      "text": "could you search duckduckgo for windows api docs",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis can you search duckduckgo for windows api docs",
+      "label": "browse_web"
+    },
+    {
+      "text": "find tutorials on transformer fine-tuning",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis find tutorials on transformer fine-tuning",
+      "label": "browse_web"
+    },
+    {
+      "text": "please find tutorials on transformer fine-tuning",
+      "label": "browse_web"
+    },
+    {
+      "text": "could you find tutorials on transformer fine-tuning",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis can you find tutorials on transformer fine-tuning",
+      "label": "browse_web"
+    },
+    {
+      "text": "browse web for fast llm inference methods",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis browse web for fast llm inference methods",
+      "label": "browse_web"
+    },
+    {
+      "text": "please browse web for fast llm inference methods",
+      "label": "browse_web"
+    },
+    {
+      "text": "could you browse web for fast llm inference methods",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis can you browse web for fast llm inference methods",
+      "label": "browse_web"
+    },
+    {
+      "text": "search github for fast modern hud designs",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis search github for fast modern hud designs",
+      "label": "browse_web"
+    },
+    {
+      "text": "please search github for fast modern hud designs",
+      "label": "browse_web"
+    },
+    {
+      "text": "could you search github for fast modern hud designs",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis can you search github for fast modern hud designs",
+      "label": "browse_web"
+    },
+    {
+      "text": "research five top ai courses online",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis research five top ai courses online",
+      "label": "browse_web"
+    },
+    {
+      "text": "please research five top ai courses online",
+      "label": "browse_web"
+    },
+    {
+      "text": "could you research five top ai courses online",
+      "label": "browse_web"
+    },
+    {
+      "text": "jarvis can you research five top ai courses online",
+      "label": "browse_web"
+    },
+    {
+      "text": "check my unread emails in gmail",
+      "label": "email_calendar"
+    },
+    {
+      "text": "jarvis check my unread emails in gmail",
+      "label": "email_calendar"
+    },
+    {
+      "text": "please check my unread emails in gmail",
+      "label": "email_calendar"
+    },
+    {
+      "text": "could you check my unread emails in gmail",
+      "label": "email_calendar"
+    },
+    {
+      "text": "jarvis can you check my unread emails in gmail",
+      "label": "email_calendar"
+    },
+    {
+      "text": "draft an email reply to john",
+      "label": "email_calendar"
+    },
+    {
+      "text": "jarvis draft an email reply to john",
+      "label": "email_calendar"
+    },
+    {
+      "text": "please draft an email reply to john",
+      "label": "email_calendar"
+    },
+    {
+      "text": "could you draft an email reply to john",
+      "label": "email_calendar"
+    },
+    {
+      "text": "jarvis can you draft an email reply to john",
+      "label": "email_calendar"
+    },
+    {
+      "text": "do i have any calendar events scheduled today",
+      "label": "email_calendar"
+    },
+    {
+      "text": "jarvis do i have any calendar events scheduled today",
+      "label": "email_calendar"
+    },
+    {
+      "text": "please do i have any calendar events scheduled today",
+      "label": "email_calendar"
+    },
+    {
+      "text": "could you do i have any calendar events scheduled today",
+      "label": "email_calendar"
+    },
+    {
+      "text": "jarvis can you do i have any calendar events scheduled today",
+      "label": "email_calendar"
+    },
+    {
+      "text": "create a meeting tomorrow at 3pm",
+      "label": "email_calendar"
+    },
+    {
+      "text": "jarvis create a meeting tomorrow at 3pm",
+      "label": "email_calendar"
+    },
+    {
+      "text": "please create a meeting tomorrow at 3pm",
+      "label": "email_calendar"
+    },
+    {
+      "text": "could you create a meeting tomorrow at 3pm",
+      "label": "email_calendar"
+    },
+    {
+      "text": "jarvis can you create a meeting tomorrow at 3pm",
+      "label": "email_calendar"
+    },
+    {
+      "text": "search emails from google cloud",
+      "label": "email_calendar"
+    },
+    {
+      "text": "jarvis search emails from google cloud",
+      "label": "email_calendar"
+    },
+    {
+      "text": "please search emails from google cloud",
+      "label": "email_calendar"
+    },
+    {
+      "text": "could you search emails from google cloud",
+      "label": "email_calendar"
+    },
+    {
+      "text": "jarvis can you search emails from google cloud",
+      "label": "email_calendar"
+    },
+    {
+      "text": "list upcoming calendar reminders",
+      "label": "email_calendar"
+    },
+    {
+      "text": "jarvis list upcoming calendar reminders",
+      "label": "email_calendar"
+    },
+    {
+      "text": "please list upcoming calendar reminders",
+      "label": "email_calendar"
+    },
+    {
+      "text": "could you list upcoming calendar reminders",
+      "label": "email_calendar"
+    },
+    {
+      "text": "jarvis can you list upcoming calendar reminders",
+      "label": "email_calendar"
+    },
+    {
+      "text": "draft a follow-up email confirming project completion",
+      "label": "email_calendar"
+    },
+    {
+      "text": "jarvis draft a follow-up email confirming project completion",
+      "label": "email_calendar"
+    },
+    {
+      "text": "please draft a follow-up email confirming project completion",
+      "label": "email_calendar"
+    },
+    {
+      "text": "could you draft a follow-up email confirming project completion",
+      "label": "email_calendar"
+    },
+    {
+      "text": "jarvis can you draft a follow-up email confirming project completion",
+      "label": "email_calendar"
+    },
+    {
+      "text": "summarize the project specification pdf",
+      "label": "document_qa"
+    },
+    {
+      "text": "jarvis summarize the project specification pdf",
+      "label": "document_qa"
+    },
+    {
+      "text": "please summarize the project specification pdf",
+      "label": "document_qa"
+    },
+    {
+      "text": "could you summarize the project specification pdf",
+      "label": "document_qa"
+    },
+    {
+      "text": "jarvis can you summarize the project specification pdf",
+      "label": "document_qa"
+    },
+    {
+      "text": "what are the requirements in document",
+      "label": "document_qa"
+    },
+    {
+      "text": "jarvis what are the requirements in document",
+      "label": "document_qa"
+    },
+    {
+      "text": "please what are the requirements in document",
+      "label": "document_qa"
+    },
+    {
+      "text": "could you what are the requirements in document",
+      "label": "document_qa"
+    },
+    {
+      "text": "jarvis can you what are the requirements in document",
+      "label": "document_qa"
+    },
+    {
+      "text": "compare document a with document b",
+      "label": "document_qa"
+    },
+    {
+      "text": "jarvis compare document a with document b",
+      "label": "document_qa"
+    },
+    {
+      "text": "please compare document a with document b",
+      "label": "document_qa"
+    },
+    {
+      "text": "could you compare document a with document b",
+      "label": "document_qa"
+    },
+    {
+      "text": "jarvis can you compare document a with document b",
+      "label": "document_qa"
+    },
+    {
+      "text": "extract the summary table from report docx",
+      "label": "document_qa"
+    },
+    {
+      "text": "jarvis extract the summary table from report docx",
+      "label": "document_qa"
+    },
+    {
+      "text": "please extract the summary table from report docx",
+      "label": "document_qa"
+    },
+    {
+      "text": "could you extract the summary table from report docx",
+      "label": "document_qa"
+    },
+    {
+      "text": "jarvis can you extract the summary table from report docx",
+      "label": "document_qa"
+    },
+    {
+      "text": "search indexed documents for memory budget",
+      "label": "document_qa"
+    },
+    {
+      "text": "jarvis search indexed documents for memory budget",
+      "label": "document_qa"
+    },
+    {
+      "text": "please search indexed documents for memory budget",
+      "label": "document_qa"
+    },
+    {
+      "text": "could you search indexed documents for memory budget",
+      "label": "document_qa"
+    },
+    {
+      "text": "jarvis can you search indexed documents for memory budget",
+      "label": "document_qa"
+    },
+    {
+      "text": "what does page 3 of the manual state",
+      "label": "document_qa"
+    },
+    {
+      "text": "jarvis what does page 3 of the manual state",
+      "label": "document_qa"
+    },
+    {
+      "text": "please what does page 3 of the manual state",
+      "label": "document_qa"
+    },
+    {
+      "text": "could you what does page 3 of the manual state",
+      "label": "document_qa"
+    },
+    {
+      "text": "jarvis can you what does page 3 of the manual state",
+      "label": "document_qa"
+    },
+    {
+      "text": "what is on my screen right now",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "jarvis what is on my screen right now",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "please what is on my screen right now",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "could you what is on my screen right now",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "jarvis can you what is on my screen right now",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "describe desktop display",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "jarvis describe desktop display",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "please describe desktop display",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "could you describe desktop display",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "jarvis can you describe desktop display",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "analyze the active window",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "jarvis analyze the active window",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "please analyze the active window",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "could you analyze the active window",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "jarvis can you analyze the active window",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "what error is displayed on my screen",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "jarvis what error is displayed on my screen",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "please what error is displayed on my screen",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "could you what error is displayed on my screen",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "jarvis can you what error is displayed on my screen",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "read the text currently visible on monitor",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "jarvis read the text currently visible on monitor",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "please read the text currently visible on monitor",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "could you read the text currently visible on monitor",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "jarvis can you read the text currently visible on monitor",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "take a screenshot and tell me what you see",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "jarvis take a screenshot and tell me what you see",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "please take a screenshot and tell me what you see",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "could you take a screenshot and tell me what you see",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "jarvis can you take a screenshot and tell me what you see",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "inspect visual contents of my desktop",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "jarvis inspect visual contents of my desktop",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "please inspect visual contents of my desktop",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "could you inspect visual contents of my desktop",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "jarvis can you inspect visual contents of my desktop",
+      "label": "screen_analysis"
+    },
+    {
+      "text": "emergency stop",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis emergency stop",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "please emergency stop",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "could you emergency stop",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis can you emergency stop",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis halt immediately",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis jarvis halt immediately",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "please jarvis halt immediately",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "could you jarvis halt immediately",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis can you jarvis halt immediately",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "kill all active tasks right now",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis kill all active tasks right now",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "please kill all active tasks right now",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "could you kill all active tasks right now",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis can you kill all active tasks right now",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "freeze all background execution",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis freeze all background execution",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "please freeze all background execution",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "could you freeze all background execution",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis can you freeze all background execution",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "abort task right now",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis abort task right now",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "please abort task right now",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "could you abort task right now",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis can you abort task right now",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "stop everything immediately",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis stop everything immediately",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "please stop everything immediately",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "could you stop everything immediately",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis can you stop everything immediately",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "shut down running operations now",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis shut down running operations now",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "please shut down running operations now",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "could you shut down running operations now",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis can you shut down running operations now",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "cancel all pending actions immediately",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis cancel all pending actions immediately",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "please cancel all pending actions immediately",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "could you cancel all pending actions immediately",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "jarvis can you cancel all pending actions immediately",
+      "label": "emergency_stop"
+    },
+    {
+      "text": "hello jarvis how are you",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis hello jarvis how are you",
+      "label": "general_chat"
+    },
+    {
+      "text": "please hello jarvis how are you",
+      "label": "general_chat"
+    },
+    {
+      "text": "could you hello jarvis how are you",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis can you hello jarvis how are you",
+      "label": "general_chat"
+    },
+    {
+      "text": "who created you",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis who created you",
+      "label": "general_chat"
+    },
+    {
+      "text": "please who created you",
+      "label": "general_chat"
+    },
+    {
+      "text": "could you who created you",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis can you who created you",
+      "label": "general_chat"
+    },
+    {
+      "text": "what capabilities do you have",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis what capabilities do you have",
+      "label": "general_chat"
+    },
+    {
+      "text": "please what capabilities do you have",
+      "label": "general_chat"
+    },
+    {
+      "text": "could you what capabilities do you have",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis can you what capabilities do you have",
+      "label": "general_chat"
+    },
+    {
+      "text": "tell me a quick tech joke",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis tell me a quick tech joke",
+      "label": "general_chat"
+    },
+    {
+      "text": "please tell me a quick tech joke",
+      "label": "general_chat"
+    },
+    {
+      "text": "could you tell me a quick tech joke",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis can you tell me a quick tech joke",
+      "label": "general_chat"
+    },
+    {
+      "text": "explain quantum computing in simple words",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis explain quantum computing in simple words",
+      "label": "general_chat"
+    },
+    {
+      "text": "please explain quantum computing in simple words",
+      "label": "general_chat"
+    },
+    {
+      "text": "could you explain quantum computing in simple words",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis can you explain quantum computing in simple words",
+      "label": "general_chat"
+    },
+    {
+      "text": "good morning jarvis",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis good morning jarvis",
+      "label": "general_chat"
+    },
+    {
+      "text": "please good morning jarvis",
+      "label": "general_chat"
+    },
+    {
+      "text": "could you good morning jarvis",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis can you good morning jarvis",
+      "label": "general_chat"
+    },
+    {
+      "text": "thank you for the assistance",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis thank you for the assistance",
+      "label": "general_chat"
+    },
+    {
+      "text": "please thank you for the assistance",
+      "label": "general_chat"
+    },
+    {
+      "text": "could you thank you for the assistance",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis can you thank you for the assistance",
+      "label": "general_chat"
+    },
+    {
+      "text": "can you help me with coding",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis can you help me with coding",
+      "label": "general_chat"
+    },
+    {
+      "text": "please can you help me with coding",
+      "label": "general_chat"
+    },
+    {
+      "text": "could you can you help me with coding",
+      "label": "general_chat"
+    },
+    {
+      "text": "jarvis can you can you help me with coding",
+      "label": "general_chat"
+    }
+  ]
+}

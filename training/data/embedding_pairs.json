@@ -1,0 +1,45 @@
+{
+  "triplets": [
+    {
+      "anchor": "what is my current cpu and ram usage",
+      "positive": "show hardware telemetry statistics for processor and memory",
+      "negative": "open visual studio code editor"
+    },
+    {
+      "anchor": "how much vram is free on the rtx 3050 gpu",
+      "positive": "check dedicated graphics video memory available",
+      "negative": "summarize the quarterly business pdf report"
+    },
+    {
+      "anchor": "open visual studio code and project workspace",
+      "positive": "launch vscode and open my source code repository",
+      "negative": "check unread emails in inbox"
+    },
+    {
+      "anchor": "find all python test files in the downloads directory",
+      "positive": "locate test_*.py files inside the user downloads folder",
+      "negative": "halt all running operations immediately"
+    },
+    {
+      "anchor": "what is currently shown on my laptop screen",
+      "positive": "capture desktop display and describe visible windows",
+      "negative": "delete old log files from storage"
+    },
+    {
+      "anchor": "emergency stop halt all background tasks right now",
+      "positive": "abort all active jobs and stop execution immediately",
+      "negative": "draft an email reply thanking the client"
+    },
+    {
+      "anchor": "draft a reply to the email from manager",
+      "positive": "compose an email draft response to my supervisor",
+      "negative": "how hot is the gpu processor running"
+    },
+    {
+      "anchor": "organize messy files in downloads by file extension",
+      "positive": "categorize files in folder into subdirectories by extension",
+      "negative": "minimize active browser window"
+    }
+  ],
+  "total_triplets": 8
+}

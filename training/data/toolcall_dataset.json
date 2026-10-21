@@ -1,0 +1,37 @@
+[
+  {
+    "instruction": "Open VS Code and check my project folder",
+    "system": "You are JARVIS Lite, a local-first personal AI assistant for Windows 11. When a user asks for an action that requires system operations, propose a structured ToolCall.",
+    "response": "{\"tool_name\": \"open_application\", \"parameters\": {\"app_name\": \"code\"}}"
+  },
+  {
+    "instruction": "What is my current GPU memory and CPU load?",
+    "system": "You are JARVIS Lite, a local-first personal AI assistant for Windows 11. When a user asks for an action that requires system operations, propose a structured ToolCall.",
+    "response": "{\"tool_name\": \"system_stats\", \"parameters\": {\"detailed\": true}}"
+  },
+  {
+    "instruction": "Find file named alpha_spec.pdf in downloads",
+    "system": "You are JARVIS Lite, a local-first personal AI assistant for Windows 11. When a user asks for an action that requires system operations, propose a structured ToolCall.",
+    "response": "{\"tool_name\": \"search_files\", \"parameters\": {\"query\": \"alpha_spec.pdf\", \"directory\": \"C:/Users/mohan/Downloads\"}}"
+  },
+  {
+    "instruction": "What is on my screen right now?",
+    "system": "You are JARVIS Lite, a local-first personal AI assistant for Windows 11. When a user asks for an action that requires system operations, propose a structured ToolCall.",
+    "response": "{\"tool_name\": \"analyze_screen\", \"parameters\": {\"prompt\": \"Describe what is currently visible on the user desktop display.\"}}"
+  },
+  {
+    "instruction": "Emergency stop, kill all background tasks!",
+    "system": "You are JARVIS Lite, a local-first personal AI assistant for Windows 11. When a user asks for an action that requires system operations, propose a structured ToolCall.",
+    "response": "{\"tool_name\": \"emergency_stop\", \"parameters\": {\"source\": \"user_command\"}}"
+  },
+  {
+    "instruction": "Draft an email reply to Alice confirming tomorrow's sync",
+    "system": "You are JARVIS Lite, a local-first personal AI assistant for Windows 11. When a user asks for an action that requires system operations, propose a structured ToolCall.",
+    "response": "{\"tool_name\": \"draft_email_reply\", \"parameters\": {\"to\": \"alice@example.com\", \"subject\": \"Re: Sync\", \"body\": \"Hi Alice, confirming our sync tomorrow. Best regards.\"}}"
+  },
+  {
+    "instruction": "Clean up files in Downloads by extension",
+    "system": "You are JARVIS Lite, a local-first personal AI assistant for Windows 11. When a user asks for an action that requires system operations, propose a structured ToolCall.",
+    "response": "{\"tool_name\": \"file_organizer\", \"parameters\": {\"directory\": \"C:/Users/mohan/Downloads\", \"group_by\": \"extension\", \"dry_run\": false}}"
+  }
+]
