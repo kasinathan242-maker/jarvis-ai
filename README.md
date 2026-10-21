@@ -287,6 +287,8 @@ mypy --strict .
 
 ---
 
-## License
+## Ownership & Rights
 
-This project is licensed under the MIT License.
+**Personal & Proprietary Project** — Developed and maintained by **Kasinathan (Kasinathan006)**.
+
+All rights reserved. Built as a local-first personal AI operating system for private personal usage.
